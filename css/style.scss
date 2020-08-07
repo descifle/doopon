@@ -1,0 +1,301 @@
+$mainColor: #fff; $secondary: #3D5975; $highlight: rgba(237, 205, 31, 1); $lightgrey: #f3f3f3; 
+
+body {
+	font-family: Open Sans,Arial,sans-serif;
+}
+
+// HEADER STYLING
+
+.navbar {
+	height: 8rem;
+    padding: .75rem;
+}
+
+#main-nav {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: $secondary;
+}
+
+.logo {
+    height: 5rem;
+    width: auto;
+    margin: 0;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header-desc {
+	height: 4rem;
+	padding: .5rem;
+    background-color: $highlight;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+// HEADER STYLING
+// MAIN
+#main {
+	background-color: white;
+}
+
+// MAIN
+// SLIDE STYLING
+
+.slider {
+	display: flex;
+	height: 30rem;
+	overflow: hidden;
+}
+
+.slide1 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(/images/electric-meter-5229750_1920.jpg);
+}
+
+.slide2 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(/images/electricity-2171003_1920.jpg);
+}
+
+.slide3 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(/images/hydro-lines-219926_1280.jpg);
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+}
+
+.slide-text {
+	justify-self: center;
+	align-self: center;
+	color: white;
+	// position: absolute;
+	// top: 50%;
+	// left: 50%;
+	// transform: translate(-50%, -50%);
+}
+
+// SLIDE STYLING
+// SERVICES SECTION
+
+#services {
+
+}
+
+.card-container {
+	.col-lg-4 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.card-container .card{
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 4px;
+	border: 0;
+	overflow: hidden;
+
+	h3 {
+		color: $secondary;
+	}
+}
+
+.card-body {
+	background-color: #ececec;
+}
+
+// SERVICES SECTION
+// ABOUT SECTION
+
+#about {
+	padding-top: 3rem;
+	padding-bottom: 4.5rem;
+	margin-bottom: 2rem;
+	position: static;
+	flex-direction: column;
+	background-color: $lightgrey;
+	box-shadow: 0 0px 20px 4px grey;
+
+	h2 {
+		font-size:1.4rem;
+	}
+}
+
+.core-container {
+	background-color: $secondary;
+	color: white;
+	padding: 2rem;
+	border: 1px solid black;
+	max-width: 35rem;
+	border-radius: 0;
+	position: static;
+	bottom: -14rem;
+	
+}
+
+.core-value {
+	font-size: .9rem;
+}
+
+// ABOUT SECTION
+// CONTACT SECTION
+
+#contact-form {
+	padding:0;
+}
+
+// CONTACT SECTION
+// MISC STYLING
+
+.spacer {
+	background-color: $highlight;
+	font-size: 3rem;
+	color: white;
+}
+
+.section-item {
+	padding:0 2rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.h1-text {
+	text-align: center;
+
+	&::after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 5rem;
+		padding-top: 15px;
+		border-bottom: 8px solid $highlight;
+	}
+}
+
+.section {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.divider {
+	&::after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 12rem;
+		padding-top: 15px;
+		border-bottom: 3px solid $highlight;
+		margin-bottom: 2rem;
+	}
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// MISC STYLING
+// TABLET?
+@media (min-width: 1000px) {
+
+	#main-nav {
+		z-index: 100;
+		position: static;
+		height: auto;
+		width: auto;
+		background-color: inherit;
+	}
+
+	.col-lg-4 .card{
+		padding-left: 0;
+		padding-right: 0;
+		width: 18rem;
+		margin: 0 auto;
+	}
+
+	#contact-form {
+		padding:2rem 4rem 2rem 0;
+	}
+
+}
+
+// TABLET?
+// DESKTOP STYLING
+
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 0 10rem;
+	}
+	
+	#main-nav {
+		z-index: 100;
+		position: static;
+		height: auto;
+		width: auto;
+		background-color: inherit;
+	}
+
+    .logo {
+        height: 6rem;
+        width: auto;
+        margin-left: 3rem;
+	}
+	
+	.header-desc {
+		height: 4rem;
+		background-color: $highlight;
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.col-lg-4 .card{
+		padding-left: 0;
+		padding-right: 0;
+		width: 22rem;
+		margin: 0 auto;
+	}
+
+	.card-body {
+		background-color: #ececec;
+		height: 25rem;
+	}
+
+	#about {
+		position: relative;
+		padding-bottom: 10rem;
+		margin-bottom: 10rem;
+	}
+
+	.core-container {
+		background-color: $secondary;
+		color: white;
+		padding: 2rem;
+		border: 1px solid black;
+		max-width: 35rem;
+		border-radius: 40px;
+		position: absolute;
+		bottom: -8rem;
+		
+	}
+	
+	.core-value {
+		font-size: .9rem;
+	}
+}
