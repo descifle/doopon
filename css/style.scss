@@ -8,7 +8,8 @@ body {
 
 .navbar {
 	height: 8rem;
-    padding: .75rem;
+	padding: .75rem;
+	transition: height .2s ease;
 }
 
 #main-nav {
@@ -54,7 +55,7 @@ body {
 	height: 30rem;
 	overflow: hidden;
 }
-
+// always add .. in front of nested folders  for easier handling
 .slide1 {
 	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/electric-meter-5229750_1920.jpg);
 }
@@ -74,13 +75,10 @@ body {
 }
 
 .slide-text {
+	padding:0 3rem;
 	justify-self: center;
 	align-self: center;
 	color: white;
-	// position: absolute;
-	// top: 50%;
-	// left: 50%;
-	// transform: translate(-50%, -50%);
 }
 
 // SLIDE STYLING
@@ -214,6 +212,10 @@ img {
 // MISC STYLING
 // TABLET?
 @media (min-width: 1000px) {
+
+	.header-desc {
+		margin-top: 8rem;
+	}
 
 	#main-nav {
 		z-index: 100;
