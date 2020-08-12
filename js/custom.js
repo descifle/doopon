@@ -4,6 +4,10 @@
 $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
+    const video = document.querySelector('.head-vid')
+    video.addEventListener('ended', (e) => {
+        this.play()
+    })
 
     //handle navbar
 
