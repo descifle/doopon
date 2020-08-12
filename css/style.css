@@ -18,6 +18,10 @@ body {
   background-color: #3D5975;
 }
 
+.home {
+  cursor: pointer;
+}
+
 .logo {
   height: 5rem;
   width: auto;
@@ -30,6 +34,7 @@ body {
 }
 
 .header-desc {
+  margin-top: 8rem;
   height: 4rem;
   padding: 0.5rem;
   background-color: #edcd1f;
@@ -41,31 +46,44 @@ body {
   background-color: white;
 }
 
-.slider {
+.head-sect {
   display: flex;
   height: 30rem;
   overflow: hidden;
+  -moz-box-shadow: 0 4px 10px 4px grey;
+  -webkit-box-shadow: 0 4px 10px 4px grey;
+  box-shadow: 0 4px 10px 4px grey;
+  /* border: 5px solid #fff; */
+  margin-bottom: 4rem;
 }
 
-.slide1 {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/electric-meter-5229750_1920.jpg);
+.video-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30rem;
 }
 
-.slide2 {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/electricity-2171003_1920.jpg);
-}
-
-.slide3 {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/hydro-lines-219926_1280.jpg);
-}
-
-.slide {
+.head-vid {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
 }
 
 .slide-text {
+  position: absolute;
   padding: 0 3rem;
   justify-self: center;
   align-self: center;
@@ -122,6 +140,13 @@ body {
   font-size: 0.9rem;
 }
 
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-auto-flow: row dense;
+  grid-gap: 2rem;
+}
+
 #contact-form {
   padding: 0;
 }
@@ -155,6 +180,19 @@ img {
   border-bottom: 8px solid #edcd1f;
 }
 
+.header-text {
+  margin: 4rem 0;
+  font-weight: 600;
+}
+.header-text::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 5rem;
+  padding-top: 15px;
+  border-bottom: 5px solid #edcd1f;
+}
+
 .section {
   margin-left: -15px;
   margin-right: -15px;
@@ -176,9 +214,68 @@ img {
   align-items: center;
 }
 
+.nav-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #3333f8;
+  text-align: center;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  padding-top: 0.2rem;
+  margin: 2rem;
+  font-size: 1.4rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 @media (min-width: 1000px) {
   .header-desc {
     margin-top: 8rem;
+  }
+
+  .head-sect {
+    display: flex;
+    height: 30rem;
+    overflow: hidden;
+    -moz-box-shadow: 0 4px 10px 4px grey;
+    -webkit-box-shadow: 0 4px 10px 4px grey;
+    box-shadow: 0 4px 10px 4px grey;
+    /* border: 5px solid #fff; */
+  }
+
+  .video-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30rem;
+  }
+
+  .head-vid {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-position: center;
+    background-size: cover;
   }
 
   #main-nav {
@@ -198,6 +295,11 @@ img {
 
   #contact-form {
     padding: 2rem 4rem 2rem 0;
+  }
+
+  .project {
+    max-height: 33rem;
+    max-width: 33rem;
   }
 }
 @media (min-width: 1200px) {
