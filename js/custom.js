@@ -50,8 +50,7 @@ $(document).ready(function () {
     });
     wow.init();
 
-    $('.nav-top').click(scrollTo)
-    $('.home').click(scrollTo)
+    $('.nav-top, .home, .navbar-brand').click(scrollTo)
     $('.slider').bxSlider();
 
     window.addEventListener('scroll', scrollTopAppear)
