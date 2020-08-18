@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
     const video = document.querySelector('.head-vid')
-    video.addEventListener('ended', (e) => {
+    video.addEventListener('ended', () => {
         this.play()
     })
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
             
         } else {
             $('#navbar').css({ 'height': '6rem'})
-            $('#navbar').css({ 'opacity': '0.95'})
+            // $('#navbar').css({ 'opacity': '0.95'})
         } 
     })
 

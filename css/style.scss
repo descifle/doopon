@@ -1,16 +1,42 @@
-$mainColor: #fff; $secondary: #3D5975; $highlight: rgba(237, 205, 31, 1); $lightgrey: #f3f3f3; 
+$mainColor: rgb(247, 247, 247); $secondary: #3D5975; $highlight: rgba(237, 205, 31, 1); $lightgrey: #f3f3f3; $navColor: white;
 
 body {
 	font-family: Open Sans,Arial,sans-serif;
+	background-color: $mainColor;
 }
 
 // HEADER STYLING
 
 .navbar {
-	background-color: rgb(248, 248, 248);
+	background-color: $navColor;
 	height: 8rem;
 	padding: .75rem;
-	transition: height .2s ease;
+	transition: all .4s ease;
+}
+
+.navbar-nav {
+	height: 100vh;
+}
+
+.head-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $navColor;
+	padding: .75rem;
+}
+
+
+.facebook-container {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 2rem;
+	color: white !important;
+	background-color:  #3b5998;
+	height: 2rem;
+	width:2rem;
+	border-radius: 50% ;
+	cursor: pointer;
 }
 
 #main-nav {
@@ -21,6 +47,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: $secondary;
+	transition: height .4s ease;
 }
 
 .home {
@@ -40,7 +67,7 @@ body {
 }
 
 .header-desc {
-	margin-top:8rem;
+	margin-top: 12rem;
 	height: 4rem;
 	padding: .5rem;
     background-color: $highlight;
@@ -51,7 +78,7 @@ body {
 // HEADER STYLING
 // MAIN
 #main {
-	background-color: white;
+	background-color: $mainColor;
 }
 
 // MAIN
@@ -114,6 +141,8 @@ body {
 
 .slide-text {
 	position: absolute;
+	font-weight: bold;
+	font-size: 1.6rem;
 	padding:0 3rem;
 	justify-self: center;
 	align-self: center;
@@ -200,7 +229,6 @@ body {
 
 .project {
 	position: relative;
-	max-width: 45%;
 	margin: 1rem;
 	overflow: hidden;
 
@@ -245,21 +273,44 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	color: white;
+}
+
+.backclient {
+	width: 10rem;
+	background-color: darkgoldenrod;
+	text-align: center;
+	// margin: 1rem 0;
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .client {
-	padding: 1.50rem 0;
+	padding: .50rem;
 	width: 10rem;
-	color: white;
 	background-color: darkgoldenrod;
 	text-align: center;
 	margin: 1rem 0;
 	border-radius: 8px;
+	overflow: hidden;
 }
 
 .client-badge {
 	background-color: green;
 	padding: .5rem 1rem;
+	// position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	margin: 0;
+	// 	font-size: .8rem;
+	// 	color: white;
+	// 	background: #ff5454;
+	// 	padding: .5rem;
+	// 	z-index: 10;
+	// 	transform: rotateZ(45deg) translate(3.5rem, -1rem);
+	// 	transform-origin: center;
+	// 	width: 12rem;
+	// 	text-align: center;
 }
 
 // CLIENT SECTION
@@ -267,6 +318,17 @@ body {
 
 #contact-form {
 	padding:0;
+}
+
+.map {
+
+	margin: 4rem 0;
+
+	iframe {
+		width: 100%;
+		height: 30rem;
+
+	}
 }
 
 // CONTACT SECTION
@@ -315,6 +377,10 @@ img {
 		padding-top: 15px;
 		border-bottom: 5px solid $highlight;
 	}
+}
+
+h3 {
+	font-weight: bold;
 }
 
 .section {
@@ -368,10 +434,6 @@ img {
 
 // TABLET?
 @media (min-width: 1000px) {
-
-	.header-desc {
-		margin-top: 8rem;
-	}
 
 	.head-sect {
 		display:flex;
@@ -433,6 +495,10 @@ img {
 		justify-content: space-around;
 	}
 
+	.navbar-nav {
+		height: 100%;
+	}
+
 }
 
 // TABLET?
@@ -456,10 +522,13 @@ img {
         width: auto;
         margin-left: 3rem;
 	}
+
+	.head-nav {
+		padding: .75rem 13rem 0 13rem;
+	}
 	
 	.header-desc {
 		height: 4rem;
-		background-color: $highlight;
 		font-size: 1.2rem;
 		font-weight: 600;
 	}

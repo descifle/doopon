@@ -7,7 +7,8 @@
   <meta name="author" content="Giovanni Headley">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="assets/animate/animate.css">
   <link href="assets/owl-carousel/css/owl.carousel.css" rel="stylesheet">
   <link href="assets/owl-carousel/css/owl.theme.css" rel="stylesheet">
@@ -18,8 +19,14 @@
 </head>
 
 <body>
-  <header>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
+  <header class="fixed-top">
+    <div class="head-nav">
+        <span><i class="fa fa-phone"></i> 301-974-5110</span>
+        <a class="facebook-container">
+          <i class="fa fa-facebook"></i>
+        </a>
+    </div>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand"><img class="logo" src="images/dooponlogotrans.png" alt="Doopon logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,6 +51,9 @@
             <a class="nav-link" href="#projects">PROJECTS</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#clients">CLIENTS</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#contact">CONTACT</a>
           </li>
         </ul>
@@ -59,7 +69,7 @@
       without hassle.
     </div>
     <div class="video-container">
-      <video class="head-vid" src="images/CircuitBoardFinal_1.mp4" muted autoplay loop></video>
+      <video class="head-vid" src="images/light_bulb_cu_stock.mov" muted autoplay loop></video>
     </div>
     <!-- <div class="slide slide1">
       <div class="slide-text wow fadeInDown" data-wow-delay="1s">
@@ -143,7 +153,7 @@
           <p><strong>QUALITY</strong>: We are commited to providing the highest level of service to our customers in the
             industry.</p>
           <p><strong>EXCELLENCE</strong>: We always take the extra step to exceed customer expectations.</p>
-          <p><strong>INTEGRITY</strong>: Doing right by our customers by following code standards and best indrustry
+          <p><strong>INTEGRITY</strong>: Doing right by our customers by following code standards and best industry
             practice.</p>
         </div>
       </div>
@@ -190,12 +200,12 @@
         </div>
       </div>
     </section>
-    <section id="clients" class="row bg-dark my-5">
+    <section id="clients" class="row client-bg my-5">
       <div class="container my-5">
         <div class="clients-container">
-          <div class="client">Baywood Hotels</div>
-          <div class="client">Tipox</div>
-          <div class="client">Greystar</div>
+          <div class="backclient"><img src="images/baywood1.jpg" alt="baywood hotels" /></div>
+          <div class="client"><img src="images/tipox.png" /></div>
+          <div class="client"><img src="images/greystar.png" /></div>
           <div class="client-badge">our clients</div>
         </div>
       </div>
@@ -204,7 +214,12 @@
       <div class="row">
         <div class="col-md-12">
           <h2 class="header-text text-center">CONTACT</h2>
-          <div class="map"></div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.407409143073!2d-76.78856408464102!3d39.18819047952691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e0568f4f43f5%3A0x78f1f2d909b4c1da!2s6618%20Ulm%20Pl%2C%20Elkridge%2C%20MD%2021075!5e0!3m2!1sen!2sus!4v1597694809503!5m2!1sen!2sus"
+               frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
         </div>
         <div class="col-md-6">
           <h3>Inquiries</h3>
@@ -234,7 +249,10 @@
               <label>Enter Your Message</label>
               <input class="form-control" type="text">
             </div>
-            <button class="float-right btn" type="submit">Submit</button>
+            <button class="btn" type="submit">Submit</button>
+            <div class="g-recaptcha" data-size="normal" data-sitekey="6Lf0rKIZAAAAAGdV3zMSXomVQl92QWfxpNrLOtll"
+              data-callback="recaptcha_callback" data-expired-callback="disableButton">
+            </div>
           </form>
         </div>
         <div class="col-md-6">
@@ -250,8 +268,8 @@
   </main>
   <footer>
     <div>
-      <div><i class="fa fa-facebook"></i></div>
-      <div><i class="fa fa-linkedin"></i></div>
+      <p class="text-center">Developed and hosted by <a href="https://swiftstaffing.com/">Swift Staffing</a> &#169;
+        SWIFT STAFFING 2020</p>
     </div>
   </footer>
 
@@ -266,6 +284,7 @@
     crossorigin="anonymous"></script>
   <script src="assets/owl-carousel/js/owl.carousel.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="assets/wow/wow.min.js"></script>
   <script src="js/custom.js"></script>
 

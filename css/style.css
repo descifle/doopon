@@ -1,12 +1,37 @@
 body {
   font-family: Open Sans, Arial, sans-serif;
+  background-color: #f7f7f7;
 }
 
 .navbar {
-  background-color: #f8f8f8;
+  background-color: white;
   height: 8rem;
   padding: 0.75rem;
-  transition: height 0.2s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar-nav {
+  height: 100vh;
+}
+
+.head-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem;
+}
+
+.facebook-container {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+  color: white !important;
+  background-color: #3b5998;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 #main-nav {
@@ -17,6 +42,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #3D5975;
+  transition: height 0.4s ease;
 }
 
 .home {
@@ -36,7 +62,7 @@ body {
 }
 
 .header-desc {
-  margin-top: 8rem;
+  margin-top: 12rem;
   height: 4rem;
   padding: 0.5rem;
   background-color: #edcd1f;
@@ -45,7 +71,7 @@ body {
 }
 
 #main {
-  background-color: white;
+  background-color: #f7f7f7;
 }
 
 .head-sect {
@@ -86,6 +112,8 @@ body {
 
 .slide-text {
   position: absolute;
+  font-weight: bold;
+  font-size: 1.6rem;
   padding: 0 3rem;
   justify-self: center;
   align-self: center;
@@ -150,7 +178,6 @@ body {
 
 .project {
   position: relative;
-  max-width: 45%;
   margin: 1rem;
   overflow: hidden;
 }
@@ -188,16 +215,25 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: white;
+}
+
+.backclient {
+  width: 10rem;
+  background-color: darkgoldenrod;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .client {
-  padding: 1.5rem 0;
+  padding: 0.5rem;
   width: 10rem;
-  color: white;
   background-color: darkgoldenrod;
   text-align: center;
   margin: 1rem 0;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .client-badge {
@@ -207,6 +243,14 @@ body {
 
 #contact-form {
   padding: 0;
+}
+
+.map {
+  margin: 4rem 0;
+}
+.map iframe {
+  width: 100%;
+  height: 30rem;
 }
 
 .spacer {
@@ -249,6 +293,10 @@ img {
   width: 5rem;
   padding-top: 15px;
   border-bottom: 5px solid #edcd1f;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 .section {
@@ -297,10 +345,6 @@ img {
 }
 
 @media (min-width: 1000px) {
-  .header-desc {
-    margin-top: 8rem;
-  }
-
   .head-sect {
     display: flex;
     height: 30rem;
@@ -360,6 +404,10 @@ img {
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .navbar-nav {
+    height: 100%;
+  }
 }
 @media (min-width: 1200px) {
   .navbar {
@@ -380,9 +428,12 @@ img {
     margin-left: 3rem;
   }
 
+  .head-nav {
+    padding: 0.75rem 13rem 0 13rem;
+  }
+
   .header-desc {
     height: 4rem;
-    background-color: #edcd1f;
     font-size: 1.2rem;
     font-weight: 600;
   }
