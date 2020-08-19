@@ -1,3 +1,5 @@
+"use strict"
+
 $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
@@ -17,11 +19,16 @@ $(document).ready(function () {
         } 
     })
 
+    $('.mobile-nav a').click(() => {
+        $('.mobile-nav').collapse('hide')
+    })
+
     $('.close').on('click', () => {
         // $('#main-nav').css({'height' : '0vh'})
         setTimeout(() => {
             $('.mobile-nav').collapse("toggle")
             // $('#main-nav').css({'height' : ''})
+            // $(this).fadeOut() TRY
         }, 400)
         // $('#main-nav').css({'height' : ''})
         // $('#main-nav').collapse()
@@ -32,11 +39,11 @@ $(document).ready(function () {
         event.preventDefault();
     
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
+            scrollTop: $($.attr(this, 'href')).offset().top - 180
         }, 500);
     });
 
-    const scrollTo = () => {
+    const scrollToTop = () => {
         $('html ,body').animate({scrollTop : 0}, 1200)
     }
 
@@ -50,13 +57,13 @@ $(document).ready(function () {
     }
 
     //setup and initialize wow js 
-    wow = new WOW({
+    const wow = new WOW({
         animateClass: 'animated',
         offset: 100
     });
     wow.init();
 
-    $('.nav-top, .home, .navbar-brand').click(scrollTo)
+    $('.nav-top, .home, .navbar-brand').click(scrollToTop)
     $('.slider').bxSlider();
 
     window.addEventListener('scroll', scrollTopAppear)
