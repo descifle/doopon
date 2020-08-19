@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
@@ -14,11 +11,20 @@ $(document).ready(function () {
     $(window).on('scroll', function() {
         if($(window).scrollTop() < 20) {
             $('#navbar').css({ 'height': ''})
-            
         } else {
             $('#navbar').css({ 'height': '6rem'})
             // $('#navbar').css({ 'opacity': '0.95'})
         } 
+    })
+
+    $('.close').on('click', () => {
+        // $('#main-nav').css({'height' : '0vh'})
+        setTimeout(() => {
+            $('.mobile-nav').collapse("toggle")
+            // $('#main-nav').css({'height' : ''})
+        }, 400)
+        // $('#main-nav').css({'height' : ''})
+        // $('#main-nav').collapse()
     })
 
     // smooth scroll to specified anchor
