@@ -48,7 +48,7 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #edcd1f;
+  background-color: #fad815;
   transition: height 0.4s ease;
   overflow: hidden;
 }
@@ -69,7 +69,7 @@ body {
   margin-top: 9rem;
   height: 4rem;
   padding: 0.5rem;
-  color: #edcd1f;
+  color: #fad815;
   background-image: linear-gradient(#f12e2e, #57310e);
   font-size: 1rem;
   font-weight: 600;
@@ -80,6 +80,7 @@ body {
 }
 
 .head-sect {
+  position: relative;
   display: flex;
   height: 35rem;
   overflow: hidden;
@@ -115,15 +116,42 @@ body {
   background-size: cover;
 }
 
+.slide1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/slide-img1.jpg);
+}
+
+.slide2 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/super8.png);
+}
+
+.slide3 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/rooflights.jpg);
+}
+
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide-text_container {
+  position: absolute;
+  background-color: rgba(250, 216, 21, 0.329);
+  color: white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 0.4rem;
+}
+
 .slide-text {
   position: absolute;
   font-weight: bold;
-  font-size: 1.6rem;
-  padding: 0 3rem;
-  justify-self: center;
-  align-self: center;
+  padding: 0.4rem;
+  font-size: 1.1rem;
   text-align: center;
-  color: white;
 }
 
 .card-container .col-lg-4 {
@@ -141,11 +169,15 @@ body {
   overflow: hidden;
 }
 .card-container .card h3 {
-  color: #3D5975;
+  color: black;
 }
 
 .card-body {
-  background-color: #d8d8d8a4;
+  background-color: #f5f4f4;
+}
+
+.card-text {
+  color: rgba(0, 0, 0, 0.651);
 }
 
 #about {
@@ -273,6 +305,7 @@ img {
 .h1-text {
   font-weight: bold;
   text-align: center;
+  color: #1d3557;
 }
 .h1-text::after {
   content: "";
@@ -440,6 +473,24 @@ button.close {
     font-weight: 600;
   }
 
+  #slide-text_container {
+    position: absolute;
+    left: 4rem;
+    background-color: rgba(250, 216, 21, 0.329);
+    color: white;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 0.4rem;
+  }
+
+  .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35rem;
+    display: flex !important;
+    align-items: center;
+  }
+
   .close {
     display: none;
   }
@@ -452,7 +503,6 @@ button.close {
   }
 
   .card-body {
-    background-color: #d8d8d8a4;
     height: 25rem;
   }
 

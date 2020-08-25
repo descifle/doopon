@@ -3,10 +3,10 @@
 $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
-    const video = document.querySelector('.head-vid')
-    video.addEventListener('ended', () => {
-        this.play()
-    })
+    // const video = document.querySelector('.head-vid')
+    // video.addEventListener('ended', () => {
+    //     this.play()
+    // })
 
     //handle navbar
 
@@ -64,7 +64,9 @@ $(document).ready(function () {
     wow.init();
 
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
-    $('.slider').bxSlider();
+    $('.slider').bxSlider({
+        mode: 'fade',
+      });
 
     window.addEventListener('scroll', scrollTopAppear)
 })

@@ -1,5 +1,5 @@
-$mainColor: rgb(250, 250, 250);$offColor: rgb(255, 255, 255); $secondary:#3D5975; $highlight: rgb(241, 46, 46);$highlight2:rgba(237, 205, 31, 1); $lightgrey: #f3f3f3; 
-$navColor: white; $cardbg: #d8d8d8a4;
+$mainColor: rgb(250, 250, 250);$offColor: rgb(255, 255, 255); $secondary:#3D5975; $highlight: rgb(241, 46, 46);$highlight2:rgb(250, 216, 21); $lightgrey: #f3f3f3; 
+$navColor: white; $cardbg: rgb(245, 244, 244); $textColor: #1d3557; $textColor2: #F1FAEE; $textFade: rgba(0, 0, 0, 0.651);
 
 body {
 	font-family: Open Sans,Arial,sans-serif;
@@ -91,6 +91,7 @@ body {
 // SLIDE STYLING
 
 .head-sect {
+	position: relative;
 	display:flex;
 	height:35rem;
 	overflow: hidden;
@@ -127,33 +128,49 @@ body {
 }
 
 // always add .. in front of nested folders  for easier handling
-// .slide1 {
-// 	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/electric-meter-5229750_1920.jpg);
-// }
 
-// .slide2 {
-// 	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/electricity-2171003_1920.jpg);
-// }
+.slider {
+}
 
-// .slide3 {
-// 	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/hydro-lines-219926_1280.jpg);
-// }
+.slide1 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/slide-img1.jpg);
+}
 
-// .slide {
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	display: flex;
-// }
+.slide2 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/super8.png);
+}
+
+.slide3 {
+	background-image: linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(../images/rooflights.jpg);
+}
+
+.slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:35rem;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+#slide-text_container {
+	position: absolute;
+	background-color: rgba(250, 216, 21, 0.329);
+	color: white;
+	width: 20rem;
+	height: 20rem;
+	// padding: 6rem 0;
+	border-radius: .4rem;
+}
 
 .slide-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 1.6rem;
-	padding:0 3rem;
-	justify-self: center;
-	align-self: center;
+	padding: .4rem;
+	font-size: 1.1rem;
+	// justify-self: center;
+	// align-self: center;
 	text-align: center;
-	color: white;
 }
 
 // SLIDE STYLING
@@ -180,12 +197,16 @@ body {
 	overflow: hidden;
 
 	h3 {
-		color: $secondary;
+		color: black;
 	}
 }
 
 .card-body {
 	background-color: $cardbg;
+}
+
+.card-text {
+	color: $textFade;
 }
 
 // SERVICES SECTION
@@ -355,6 +376,7 @@ img {
 .h1-text {
 	font-weight: bold;
 	text-align: center;
+	color: $textColor;
 
 	&::after {
 		content: "";
@@ -535,6 +557,24 @@ button.close {
 		font-weight: 600;
 	}
 
+	#slide-text_container {
+		position: absolute;
+		left: 4rem;
+		background-color: rgba(250, 216, 21, 0.329);
+		color: white;
+		width: 20rem;
+		height: 20rem;
+		border-radius: 0.4rem;
+	}
+
+	.slide {
+		background-size: cover;
+		background-repeat: no-repeat;
+		height:35rem;
+		display: flex !important;
+		align-items: center;
+	}
+
 	.close {
 		display: none;
 	}
@@ -547,7 +587,6 @@ button.close {
 	}
 
 	.card-body {
-		background-color: $cardbg;
 		height: 25rem;
 	}
 
