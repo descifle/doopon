@@ -64,9 +64,7 @@ $(document).ready(function () {
     wow.init();
 
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
-    $('.slider').bxSlider({
-        mode: 'fade',
-      });
+    $('.slider').bxSlider();
 
     window.addEventListener('scroll', scrollTopAppear)
 })
