@@ -188,6 +188,8 @@ body {
 
 .card-body {
   background-color: #f5f4f4;
+  border: 1px solid #ddd;
+  margin-bottom: 1.4rem;
   transition: height 0.4s ease;
 }
 
@@ -196,14 +198,15 @@ body {
 }
 
 .card-block {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #f12e2e;
-  color: white;
-  width: 100%;
-  cursor: pointer;
+  display: none;
+  transition: background-color, color, box-shadow 0.4s ease;
+}
+.card-block:active {
+  background-color: #b12020;
+}
+.card-block:hover {
+  box-shadow: 8px 10px 20px 10px grey;
+  background-color: #b12020;
 }
 
 #about {
@@ -418,6 +421,18 @@ button.close {
   right: 0;
 }
 
+.clear-me-success {
+  background-color: #18d118;
+  padding: 1rem;
+  color: white;
+}
+
+.clear-me-fail {
+  background-color: red;
+  padding: 1rem;
+  color: white;
+}
+
 .extend {
   height: 50rem !important;
 }
@@ -481,16 +496,9 @@ button.close {
     margin-bottom: 1rem;
   }
 
-  .clear-me-success {
-    background-color: #18d118;
-    padding: 1rem;
-    color: white;
-  }
-
-  .clear-me-fail {
-    background-color: red;
-    padding: 1rem;
-    color: white;
+  .card-body {
+    height: 25rem;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -540,6 +548,7 @@ button.close {
 
   .card-body {
     height: 25rem;
+    margin-bottom: 0;
   }
 
   #about {
@@ -561,6 +570,26 @@ button.close {
 
   .core-value {
     font-size: 0.9rem;
+  }
+
+  .card-block {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #f12e2e;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color, color, box-shadow 0.4s ease;
+  }
+  .card-block:active {
+    background-color: #b12020;
+  }
+  .card-block:hover {
+    box-shadow: 8px 10px 20px 10px grey;
+    background-color: #b12020;
   }
 }
 
