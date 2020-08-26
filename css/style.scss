@@ -145,6 +145,7 @@ body {
 }
 
 .slide {
+	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -154,8 +155,20 @@ body {
 	justify-content: center;
 }
 
+.slide::after {
+	z-index: 1;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.295);
+}
+
 #slide-text_container {
 	position: absolute;
+	z-index: 2;
 	background-color: rgba(250, 216, 21, 0.329);
 	color: white;
 	width: 20rem;
@@ -204,10 +217,22 @@ body {
 
 .card-body {
 	background-color: $cardbg;
+	transition: height .4s ease;
 }
 
 .card-text {
 	color: $textFade;
+}
+
+.card-block {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: $highlight;
+	color: white;
+	width: 100%;
+	cursor: pointer;
 }
 
 // SERVICES SECTION
@@ -468,6 +493,10 @@ button.close {
 	right: 0;
 }
 
+.extend {
+	height: 50rem !important;
+}
+
 // MISC STYLING
 
 // TABLET?
@@ -498,15 +527,10 @@ button.close {
 		background-color: inherit;
 	}
 
-	.col-lg-4 .card{
-		padding-left: 0;
-		padding-right: 0;
-		width: 18rem;
-		margin: 0 auto;
-	}
-
 	#contact-form {
-		padding:2rem 4rem 2rem 0;
+		padding:2rem;
+		border: solid 1px #ddd;
+		border-radius: .2rem;
 	}
 
 	.project {
@@ -528,6 +552,24 @@ button.close {
 
 	.close {
 		display:none;
+	}
+
+	.submit-button {
+		background-color: #28a745;
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.clear-me-success {
+		background-color: rgb(24, 209, 24);
+		padding: 1rem;
+		color: white;
+	}
+
+	.clear-me-fail {
+		background-color: red;
+		padding: 1rem;
+		color: white;
 	}
 
 }
@@ -580,12 +622,12 @@ button.close {
 		display: none;
 	}
 
-	.col-lg-4 .card{
-		padding-left: 0;
-		padding-right: 0;
-		width: 22rem;
-		margin: 0 auto;
-	}
+	// .col-lg-4 .card{
+	// 	padding-left: 0;
+	// 	padding-right: 0;
+	// 	width: 22rem;
+	// 	margin: 0 auto;
+	// }
 
 	.card-body {
 		height: 25rem;

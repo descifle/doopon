@@ -129,6 +129,7 @@ body {
 }
 
 .slide {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -138,8 +139,20 @@ body {
   justify-content: center;
 }
 
+.slide::after {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.295);
+}
+
 #slide-text_container {
   position: absolute;
+  z-index: 2;
   background-color: rgba(250, 216, 21, 0.329);
   color: white;
   width: 20rem;
@@ -175,10 +188,22 @@ body {
 
 .card-body {
   background-color: #f5f4f4;
+  transition: height 0.4s ease;
 }
 
 .card-text {
   color: rgba(0, 0, 0, 0.651);
+}
+
+.card-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #f12e2e;
+  color: white;
+  width: 100%;
+  cursor: pointer;
 }
 
 #about {
@@ -393,6 +418,10 @@ button.close {
   right: 0;
 }
 
+.extend {
+  height: 50rem !important;
+}
+
 @media (min-width: 1000px) {
   .head-vid {
     position: relative;
@@ -419,15 +448,10 @@ button.close {
     background-color: inherit;
   }
 
-  .col-lg-4 .card {
-    padding-left: 0;
-    padding-right: 0;
-    width: 18rem;
-    margin: 0 auto;
-  }
-
   #contact-form {
-    padding: 2rem 4rem 2rem 0;
+    padding: 2rem;
+    border: solid 1px #ddd;
+    border-radius: 0.2rem;
   }
 
   .project {
@@ -449,6 +473,24 @@ button.close {
 
   .close {
     display: none;
+  }
+
+  .submit-button {
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .clear-me-success {
+    background-color: #18d118;
+    padding: 1rem;
+    color: white;
+  }
+
+  .clear-me-fail {
+    background-color: red;
+    padding: 1rem;
+    color: white;
   }
 }
 @media (min-width: 1200px) {
@@ -494,13 +536,6 @@ button.close {
 
   .close {
     display: none;
-  }
-
-  .col-lg-4 .card {
-    padding-left: 0;
-    padding-right: 0;
-    width: 22rem;
-    margin: 0 auto;
   }
 
   .card-body {

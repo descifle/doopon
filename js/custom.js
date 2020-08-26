@@ -1,12 +1,34 @@
 "use strict"
 
+$("#contact-form").submit(function() {
+
+    const str = $(this).serialize();
+
+    $.ajax({ type: "POST", url: "formparse.php", data: str, success: function(result){
+        $(".whatwhat").html(result)
+        grecaptcha.reset()
+        document.querySelector('#contact-form').reset()
+        setTimeout(() => {
+            $(".whatwhat").html("")
+        }, 8000)
+    }})
+    return false;
+})
+
+// recaptcha settings || client side validation
+function recaptcha_callback() {
+    $(".submit-button").attr("disabled", false);
+    $(".submit-button").removeClass('disabled');
+}
+
+function disableButton() {
+    $(".submit-button").attr("disabled", true);
+    $(".submit-button").addClass('disabled');
+}
+
 $(document).ready(function () {
 
     const navTop = document.querySelector('.nav-top')
-    // const video = document.querySelector('.head-vid')
-    // video.addEventListener('ended', () => {
-    //     this.play()
-    // })
 
     //handle navbar
 
@@ -47,6 +69,12 @@ $(document).ready(function () {
         $('html ,body').animate({scrollTop : 0}, 1200)
     }
 
+    const openCard = (e) => {
+        $(e).on('click',() => {
+            e.toggleClass("extend")
+        })
+    }
+
     const scrollTopAppear = () => {
         let y = window.scrollY
         if (y >= 800) {
@@ -63,6 +91,9 @@ $(document).ready(function () {
     });
     wow.init();
 
+    openCard($("#card-body1"))
+    openCard($("#card-body2"))
+    openCard($("#card-body3"))
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
     $('.slider').bxSlider();
 

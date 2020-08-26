@@ -117,7 +117,7 @@
             <div class="services-card_img">
               <img class="card-img-top" src="images/commercialbuilding.jpg" alt="commercial building">
             </div>
-            <div class="card-body">
+            <div id="card-body1" class="card-body">
               <h3>Power System Construction</h3>
               <p class="card-text">
                 Doopon Electric has the knowledge and the experience in the construction of big and small simple complex elictrical distribution systems
@@ -135,6 +135,7 @@
                 motion sense lights, landscape lighting,
                 energy saving upgrades
               </p>
+              <div class="card-block" >Show More</div>
             </div>
           </div>
         </div>
@@ -143,7 +144,7 @@
             <div class="services-card_img">
               <img class="card-img-top" src="images/rooflights.jpg" alt="lights">
             </div>
-            <div class="card-body">
+            <div id="card-body2" class="card-body">
               <h3>New Construction</h3>
               <p class="card-text">
                 We have the knowledge, experience, and seasoned personnel to construct new
@@ -166,6 +167,7 @@
                   <li>Whole house generators</li>
                 </ul>
               <p>
+                <div id="card-blocker2" class="card-block">Show More</div>
             </div>
           </div>
         </div>
@@ -174,7 +176,7 @@
             <div class="services-card_img">
               <img class="card-img-top" src="images/renoimg.jpg" alt="lights">
             </div>
-            <div class="card-body">
+            <div id="card-body3" class="card-body">
               <h3>Electric Renovations</h3>
               <p class="card-text">
                 We provide renovations for:
@@ -196,6 +198,7 @@
                   <li>Infrared scanning of electrical system</li>
                 </ul>
               <p>
+                <div id="card-blocker3" class="card-block">Show More</div>
             </div>
           </div>
         </div>
@@ -299,24 +302,32 @@
         </div>
         <div class="col-md-6">
           <h3 class="header-text text-center">Contact Us</h3>
+          <div class="whatwhat"></div>
           <form id="contact-form">
+            <h4>Questions?</h4>
             <div class="form-group">
               <label>Enter Your Name</label>
-              <input class="form-control" type="text">
+              <input class="form-control" type="text" name="name">
             </div>
             <div class="form-group">
               <label>Enter Your Email</label>
-              <input class="form-control" type="email">
+              <input class="form-control" type="email" name="email">
             </div>
             <div class="form-group">
               <label>Enter Your Subject</label>
-              <input class="form-control" type="text">
+              <select class="form-control color-dark" type="text" name="subject">
+                <option value="energy">Energy</option>
+                <option value="power">Power Systems</option>
+                <option value="new_construction">New Construction</option>
+                <option value="renovations">Renovations</option>
+                <option value="other">Other</option>
+              </select>
             </div>
             <div class="form-group">
               <label>Enter Your Message</label>
-              <input class="form-control" type="text">
+              <textarea class="form-control" type="text" name="message"></textarea>
             </div>
-            <button class="btn" type="submit">Submit</button>
+            <button class="submit-button btn disabled" form="contact-form" type="submit" disabled="true" onclick="blur()">Submit</button>
             <div class="g-recaptcha" data-size="normal" data-sitekey="6Lf0rKIZAAAAAGdV3zMSXomVQl92QWfxpNrLOtll"
               data-callback="recaptcha_callback" data-expired-callback="disableButton">
             </div>
