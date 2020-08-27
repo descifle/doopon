@@ -10,8 +10,15 @@ body {
   transition: all 0.3s ease;
 }
 
-.home {
+#home {
   cursor: pointer;
+  color: #3D5975;
+}
+#home:active {
+  color: #111c27;
+}
+#home:hover {
+  color: #111c27;
 }
 
 .logo {
@@ -63,6 +70,7 @@ body {
 .nav-link {
   font-size: 1.2rem;
   font-weight: 600;
+  transition: color 0.4s ease;
 }
 
 .header-desc {
@@ -91,31 +99,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.video-container {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 35rem;
-}
-
-.head-vid {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background-position: center;
-  background-size: cover;
-}
-
 .slide1 {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(../images/slide-img3.jpg);
 }
@@ -133,7 +116,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 35rem;
+  height: 30rem;
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -153,7 +136,7 @@ body {
 #slide-text_container {
   position: absolute;
   z-index: 2;
-  background-color: rgba(250, 216, 21, 0.329);
+  background-color: rgba(250, 216, 21, 0.5);
   color: white;
   width: 20rem;
   height: 20rem;
@@ -174,23 +157,30 @@ body {
 }
 
 .card-container .card {
+  display: inline-block;
   padding-left: 0;
   padding-right: 0;
-  width: 100%;
-  margin: 0 auto;
+  width: 20rem;
+  margin: 1rem;
   border-radius: 4px;
   border: 0;
   overflow: hidden;
+  float: left;
 }
 .card-container .card h3 {
   color: black;
 }
 
 .card-body {
+  font-size: 0.9rem;
+  height: 100%;
   background-color: #f5f4f4;
   border: 1px solid #ddd;
   margin-bottom: 1.4rem;
   transition: height 0.4s ease;
+}
+.card-body ul {
+  margin-bottom: 0.5rem;
 }
 
 .card-text {
@@ -437,6 +427,11 @@ button.close {
   height: 50rem !important;
 }
 
+.footer {
+  background-color: #e2e2e2;
+  height: 4rem;
+}
+
 @media (min-width: 1000px) {
   .head-vid {
     position: relative;
@@ -497,7 +492,6 @@ button.close {
   }
 
   .card-body {
-    height: 25rem;
     margin-bottom: 0;
   }
 }
@@ -527,8 +521,6 @@ button.close {
   #slide-text_container {
     position: absolute;
     left: 4rem;
-    background-color: rgba(250, 216, 21, 0.329);
-    color: white;
     width: 20rem;
     height: 20rem;
     border-radius: 0.4rem;
@@ -544,11 +536,6 @@ button.close {
 
   .close {
     display: none;
-  }
-
-  .card-body {
-    height: 25rem;
-    margin-bottom: 0;
   }
 
   #about {
@@ -591,6 +578,69 @@ button.close {
     box-shadow: 8px 10px 20px 10px grey;
     background-color: #b12020;
   }
+}
+.card-container {
+  position: relative;
+  padding-bottom: 70px;
+  padding-top: 0px;
+}
+.card-container .carousel-box {
+  position: relative;
+}
+.card-container .carousel-box .inner {
+  position: relative;
+  overflow: hidden;
+  max-width: none;
+  margin: 0;
+}
+.card-container .carousel.main {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-right: -20px;
+}
+.card-container .caroufredsel_wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.banner_prev {
+  display: block;
+  width: 20px;
+  height: 31px;
+  background: url(../images/prev.png) left top no-repeat;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.banner_prev:hover {
+  background-position: bottom;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.banner_next {
+  display: block;
+  width: 20px;
+  height: 31px;
+  background: url(../images/next.png) left top no-repeat;
+  position: absolute;
+  right: 50%;
+  margin-right: -40px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.banner_next:hover {
+  background-position: bottom;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 
 /*# sourceMappingURL=style.css.map */

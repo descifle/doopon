@@ -18,7 +18,7 @@
   <title>Doopon</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="230">
   <header class="fixed-top">
     <div class="head-nav">
         <span><i class="fa fa-phone"></i> 301-974-5110</span>
@@ -40,7 +40,7 @@
         </button>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link home">HOME<span class="sr-only">(current)</span></a>
+            <a id="home" class="nav-link home">HOME<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#services">SERVICES </a>
@@ -74,7 +74,7 @@
     <!-- <div class="video-container">
       <video class="head-vid" src="images/light_bulb_cu_stock.mov" muted autoplay loop playsinline></video>
     </div> -->
-    <div class="slide slide1">
+    <div class="slide slide1" title=" food place">
       <div id="slide-text_container" class="wow fadeIn" data-wow-delay="1s">
         <div class="slide-text " >
           Doopon Electric LLC proudly serving the metropolitan areas of DC, MD, and VA with high quality electrical, construction, and general electrical services.
@@ -91,8 +91,10 @@
   <main class="container-fluid" id="main">
     <section class="container mb-5" id="services">
       <h1 class="h1-text">SERVICES</h1>
-      <div class="row card-container mt-5">
-        <div class="col-lg-3">
+      <div class="card-container clearfix">
+        <a class="banner_prev" href=""></a>
+				<a class="banner_next" href=""></a>
+        <div class="banners">
           <div class="card">
             <div class="services-card_img">
               <img class="card-img-top" src="images/elictricalpanel.jpg" alt="electrical panel">
@@ -111,8 +113,6 @@
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3">
           <div class="card">
             <div class="services-card_img">
               <img class="card-img-top" src="images/commercialbuilding.jpg" alt="commercial building">
@@ -135,11 +135,8 @@
                 motion sense lights, landscape lighting,
                 energy saving upgrades
               </p>
-              <div class="card-block" >Show More</div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3">
           <div class="card">
             <div class="services-card_img">
               <img class="card-img-top" src="images/rooflights.jpg" alt="lights">
@@ -167,11 +164,8 @@
                   <li>Whole house generators</li>
                 </ul>
               <p>
-                <div id="card-blocker2" class="card-block">Show More</div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3">
           <div class="card">
             <div class="services-card_img">
               <img class="card-img-top" src="images/renoimg.jpg" alt="lights">
@@ -198,7 +192,6 @@
                   <li>Infrared scanning of electrical system</li>
                 </ul>
               <p>
-                <div id="card-blocker3" class="card-block">Show More</div>
             </div>
           </div>
         </div>
@@ -282,25 +275,8 @@
     </section>
     <section id="contact" class="container my-5">
       <div class="row">
-        <div class="col-md-12">
-          <h2 class="header-text text-center">CONTACT</h2>
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.407409143073!2d-76.78856408464102!3d39.18819047952691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e0568f4f43f5%3A0x78f1f2d909b4c1da!2s6618%20Ulm%20Pl%2C%20Elkridge%2C%20MD%2021075!5e0!3m2!1sen!2sus!4v1597694809503!5m2!1sen!2sus"
-               frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0"></iframe>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h3>Inquiries</h3>
-          <p>For any inquiries, questions or commendations, please call: 301-974-5110 or fill out the following form</p>
-        </div>
-        <div class="col-md-6">
-          <h3>Head Office</h3>
-          <p>6618 Ulm PL, Elkridge, MD 21075</p>
-          <p>Robert@dooponelectric.com <br /> Tel: 301-974-5110</p>
-        </div>
-        <div class="col-md-6">
+        <h2 class="header-text text-center w-100">CONTACT</h2>
+        <div class="col-lg-6">
           <h3 class="header-text text-center">Contact Us</h3>
           <div class="whatwhat"></div>
           <form id="contact-form">
@@ -333,6 +309,25 @@
             </div>
           </form>
         </div>
+        <div class="col-lg-6">
+          <h3 class="header-text text-center">Directions</h3>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.407409143073!2d-76.78856408464102!3d39.18819047952691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e0568f4f43f5%3A0x78f1f2d909b4c1da!2s6618%20Ulm%20Pl%2C%20Elkridge%2C%20MD%2021075!5e0!3m2!1sen!2sus!4v1597694809503!5m2!1sen!2sus"
+               frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Inquiries</h3>
+          <p>For any inquiries, questions or commendations, please call: 301-974-5110 or fill out the following form</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Head Office</h3>
+          <p>6618 Ulm PL, Elkridge, MD 21075</p>
+          <p>Robert@dooponelectric.com <br /> Tel: 301-974-5110</p>
+        </div>
+    
         <div class="col-md-6">
           <h3>Employment</h3>
           <p>To apply for a job with Doopon Electric LLC, please send a cover letter together with your C.V. to:
@@ -344,10 +339,10 @@
     </section>
     <div class="nav-top"> &#8593</div>
   </main>
-  <footer>
+  <footer class="container-fluid flex-center footer text-muted">
     <div>
-      <p class="text-center">Developed and hosted by <a href="https://swiftstaffing.com/">Swift Staffing</a> &#169;
-        SWIFT STAFFING 2020</p>
+      <div class="text-center">Developed and hosted by <a href="https://swiftstaffing.com/">Swift Staffing</a> &#169;
+        SWIFT STAFFING 2020</div>
     </div>
   </footer>
 
@@ -364,6 +359,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="assets/wow/wow.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/caroufredsel.js"></script>
   <script src="js/custom.js"></script>
 
 </body>

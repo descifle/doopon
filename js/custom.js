@@ -69,11 +69,11 @@ $(document).ready(function () {
         $('html ,body').animate({scrollTop : 0}, 1200)
     }
 
-    const openCard = (e) => {
-        $(e).on('click',() => {
-            e.toggleClass("extend")
-        })
-    }
+    // const openCard = (e) => {
+    //     $(e).on('click',() => {
+    //         e.toggleClass("extend")
+    //     })
+    // }
 
     const scrollTopAppear = () => {
         let y = window.scrollY
@@ -84,6 +84,35 @@ $(document).ready(function () {
         }
     }
 
+    //	carouFredSel banner
+    $('.card-container .banners').carouFredSel({
+        auto: {
+            timeoutDuration: 8000
+        },
+        responsive: true,
+        prev: '.banner_prev',
+        next: '.banner_next',
+        width: '100%',
+        scroll: {
+            items: 1,
+            duration: 1000,
+            easing: "easeOutExpo"
+        },
+        items: {
+            width: '350',
+            height: 'variable',	//	optionally resize item-height
+            visible: {
+                min: 1,
+                max: 3
+            }
+        },
+        mousewheel: false,
+        swipe: {
+            onMouse: true,
+            onTouch: true
+            }
+    });
+
     //setup and initialize wow js 
     const wow = new WOW({
         animateClass: 'animated',
@@ -91,11 +120,10 @@ $(document).ready(function () {
     });
     wow.init();
 
-    openCard($("#card-body1"))
-    openCard($("#card-body2"))
-    openCard($("#card-body3"))
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
-    $('.slider').bxSlider();
+    $('.slider').bxSlider({
+        captions: true
+    });
 
     window.addEventListener('scroll', scrollTopAppear)
 })
