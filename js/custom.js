@@ -99,7 +99,7 @@ $(document).ready(function () {
             easing: "easeOutExpo"
         },
         items: {
-            width: '350',
+            width: '400',
             height: 'variable',	//	optionally resize item-height
             visible: {
                 min: 1,
@@ -122,7 +122,11 @@ $(document).ready(function () {
 
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
     $('.slider').bxSlider({
-        captions: true
+        captions: true,
+        mode: 'fade',
+        speed: 1000,
+        touchEnabled: false,
+
     });
 
     window.addEventListener('scroll', scrollTopAppear)

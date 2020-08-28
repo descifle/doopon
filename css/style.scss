@@ -1,5 +1,5 @@
 $mainColor: rgb(250, 250, 250);$offColor: rgb(255, 255, 255); $secondary:#3D5975; $highlight: rgb(241, 46, 46);$highlight2:rgb(250, 216, 21); $lightgrey: #f3f3f3; 
-$navColor: white; $cardbg: rgb(245, 244, 244); $textColor: #1d3557; $textColor2: #F1FAEE; $textFade: rgba(0, 0, 0, 0.651);
+$navColor: white; $cardbg: rgb(245, 244, 244); $textColor: #1d3557; $textColor2: #F1FAEE; $textFade: rgba(0, 0, 0, 0.651); $highlightblue: rgb(140, 251, 255);
 
 body {
 	font-family: Open Sans,Arial,sans-serif;
@@ -86,7 +86,7 @@ body {
 	height: 4rem;
 	padding: .5rem;
 	color: $highlight2;
-    background-image: linear-gradient($highlight,rgb(87, 49, 14));
+    background-image: linear-gradient($highlight,80%,rgba(61, 61, 61, 0.801));
     font-size: 1rem;
     font-weight: 600;
 }
@@ -176,11 +176,11 @@ body {
 	background-color: rgba(255, 255, 255, 0.295);
 }
 
-#slide-text_container {
+.slide-text_container {
 	position: absolute;
 	z-index: 2;
-	background-color: rgba(250, 216, 21, 0.5);
-	color: white;
+	background-color: rgba(250, 216, 21, 0.349);
+	color: rgb(0, 247, 255);
 	width: 20rem;
 	height: 20rem;
 	// padding: 6rem 0;
@@ -199,13 +199,6 @@ body {
 
 // SLIDE STYLING
 // SERVICES SECTION
-
-.card-container {
-	.col-lg-4 {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
 
 .card-container .card{
 	display: inline-block;
@@ -531,6 +524,16 @@ button.close {
 	height: 4rem;
 }
 
+.submit-button {
+	background-color: #28a745;
+	color: white;
+	margin-bottom: 1rem;
+
+	&:disabled {
+		background-color: inherit;
+	}
+}
+
 // MISC STYLING
 
 // TABLET?
@@ -588,12 +591,6 @@ button.close {
 		display:none;
 	}
 
-	.submit-button {
-		background-color: #28a745;
-		color: white;
-		margin-bottom: 1rem;
-	}
-
 	.card-body {
 		margin-bottom: 0;
 	}
@@ -626,7 +623,7 @@ button.close {
 		font-weight: 600;
 	}
 
-	#slide-text_container {
+	.slide-text_container {
 		position: absolute;
 		left: 4rem;
 		width: 20rem;

@@ -78,7 +78,7 @@ body {
   height: 4rem;
   padding: 0.5rem;
   color: #fad815;
-  background-image: linear-gradient(#f12e2e, #57310e);
+  background-image: linear-gradient(#f12e2e, 80%, rgba(61, 61, 61, 0.801));
   font-size: 1rem;
   font-weight: 600;
 }
@@ -133,11 +133,11 @@ body {
   background-color: rgba(255, 255, 255, 0.295);
 }
 
-#slide-text_container {
+.slide-text_container {
   position: absolute;
   z-index: 2;
-  background-color: rgba(250, 216, 21, 0.5);
-  color: white;
+  background-color: rgba(250, 216, 21, 0.349);
+  color: #00f7ff;
   width: 20rem;
   height: 20rem;
   border-radius: 0.4rem;
@@ -149,11 +149,6 @@ body {
   padding: 0.4rem;
   font-size: 1.1rem;
   text-align: center;
-}
-
-.card-container .col-lg-4 {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .card-container .card {
@@ -432,6 +427,15 @@ button.close {
   height: 4rem;
 }
 
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  margin-bottom: 1rem;
+}
+.submit-button:disabled {
+  background-color: inherit;
+}
+
 @media (min-width: 1000px) {
   .head-vid {
     position: relative;
@@ -485,12 +489,6 @@ button.close {
     display: none;
   }
 
-  .submit-button {
-    background-color: #28a745;
-    color: white;
-    margin-bottom: 1rem;
-  }
-
   .card-body {
     margin-bottom: 0;
   }
@@ -518,7 +516,7 @@ button.close {
     font-weight: 600;
   }
 
-  #slide-text_container {
+  .slide-text_container {
     position: absolute;
     left: 4rem;
     width: 20rem;
