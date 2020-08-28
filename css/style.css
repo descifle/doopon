@@ -136,8 +136,8 @@ body {
 .slide-text_container {
   position: absolute;
   z-index: 2;
-  background-color: rgba(250, 216, 21, 0.349);
-  color: #00f7ff;
+  background-color: rgba(0, 247, 255, 0.171);
+  color: white;
   width: 20rem;
   height: 20rem;
   border-radius: 0.4rem;
@@ -149,6 +149,7 @@ body {
   padding: 0.4rem;
   font-size: 1.1rem;
   text-align: center;
+  vertical-align: middle;
 }
 
 .card-container .card {
