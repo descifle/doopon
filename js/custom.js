@@ -113,7 +113,7 @@ $(document).ready(function () {
             }
     });
 
-    //setup and initialize wow js 
+    //setup and initialize wow js  
     const wow = new WOW({
         animateClass: 'animated',
         offset: 100
