@@ -437,6 +437,70 @@ button.close {
   background-color: inherit;
 }
 
+.card-container {
+  position: relative;
+  padding-bottom: 70px;
+  padding-top: 0px;
+}
+.card-container .carousel-box {
+  position: relative;
+}
+.card-container .carousel-box .inner {
+  position: relative;
+  overflow: hidden;
+  max-width: none;
+  margin: 0;
+}
+.card-container .carousel.main {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-right: -20px;
+}
+.card-container .caroufredsel_wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.banner_prev {
+  display: block;
+  width: 20px;
+  height: 31px;
+  background: url(../images/prev.png) left top no-repeat;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.banner_prev:hover {
+  background-position: bottom;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.banner_next {
+  display: block;
+  width: 20px;
+  height: 31px;
+  background: url(../images/next.png) left top no-repeat;
+  position: absolute;
+  right: 50%;
+  margin-right: -40px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.banner_next:hover {
+  background-position: bottom;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
 @media (min-width: 1000px) {
   .head-vid {
     position: relative;
@@ -577,69 +641,22 @@ button.close {
     box-shadow: 8px 10px 20px 10px grey;
     background-color: #b12020;
   }
-}
-.card-container {
-  position: relative;
-  padding-bottom: 70px;
-  padding-top: 0px;
-}
-.card-container .carousel-box {
-  position: relative;
-}
-.card-container .carousel-box .inner {
-  position: relative;
-  overflow: hidden;
-  max-width: none;
-  margin: 0;
-}
-.card-container .carousel.main {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  margin-right: -20px;
-}
-.card-container .caroufredsel_wrapper {
-  padding: 0;
-  margin: 0;
-}
 
-.banner_prev {
-  display: block;
-  width: 20px;
-  height: 31px;
-  background: url(../images/prev.png) left top no-repeat;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
-  bottom: 0;
-  z-index: 0;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-}
-.banner_prev:hover {
-  background-position: bottom;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
+  .banner_prev {
+    left: -40px;
+    margin-left: 0px;
+    bottom: 50%;
+    margin-bottom: -21px;
+    z-index: 0;
+  }
 
-.banner_next {
-  display: block;
-  width: 20px;
-  height: 31px;
-  background: url(../images/next.png) left top no-repeat;
-  position: absolute;
-  right: 50%;
-  margin-right: -40px;
-  bottom: 0;
-  z-index: 0;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-}
-.banner_next:hover {
-  background-position: bottom;
-  opacity: 1;
-  filter: alpha(opacity=100);
+  .banner_next {
+    right: -40px;
+    margin-right: 0px;
+    bottom: 50%;
+    margin-bottom: -21px;
+    z-index: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
