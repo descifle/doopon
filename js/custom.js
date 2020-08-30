@@ -35,9 +35,10 @@ $(document).ready(function () {
     $(window).on('scroll', function() {
         if($(window).scrollTop() < 20) {
             $('#navbar').css({ 'height': ''})
+            $('#navbar').css({ 'box-shadow': ''})
         } else {
             $('#navbar').css({ 'height': '6rem'})
-            // $('#navbar').css({ 'opacity': '0.95'})
+            $('#navbar').css({ 'box-shadow': '0px 0px 10px #706d6d'})
         } 
     })
 
