@@ -10,14 +10,14 @@ body {
   transition: all 0.3s ease;
 }
 
-#home {
+.home {
   cursor: pointer;
   color: #3D5975;
 }
-#home:active {
+.home:active {
   color: #111c27;
 }
-#home:hover {
+.home:hover {
   color: #111c27;
 }
 
@@ -78,10 +78,11 @@ body {
 .header-desc {
   margin-top: 9rem;
   height: 4rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   color: #fad815;
+  text-align: center;
   background-image: linear-gradient(#f12e2e, 80%, #272727);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -126,6 +127,7 @@ body {
 
 .slide-text_container {
   position: absolute;
+  display: block;
   z-index: 2;
   background-color: rgba(0, 247, 255, 0.171);
   color: white;
@@ -137,10 +139,19 @@ body {
 .slide-text {
   position: absolute;
   font-weight: bold;
-  padding: 0.4rem;
-  font-size: 1.1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  height: 100%;
   text-align: center;
   vertical-align: middle;
+}
+
+.btn-cta {
+  color: #fff;
+  font-weight: bolder;
+  margin-top: 0.5rem;
+  background-color: #28a745;
+  border-color: #28a745;
 }
 
 .card-container .card {
@@ -280,7 +291,9 @@ body {
 }
 
 #contact-form {
-  padding: 0;
+  padding: 1rem;
+  background-color: #3D5975;
+  color: white;
 }
 
 .map {
@@ -289,6 +302,22 @@ body {
 .map iframe {
   width: 100%;
   height: 30rem;
+}
+
+.footer {
+  background-color: #e2e2e2;
+}
+
+.location {
+  padding: 1rem;
+}
+
+.list-group-item {
+  background-color: inherit !important;
+  font-weight: bold;
+}
+.list-group-item a {
+  color: inherit;
 }
 
 .spacer {
@@ -366,6 +395,7 @@ h3 {
 .nav-top {
   cursor: pointer;
   position: fixed;
+  z-index: 99;
   bottom: 0;
   right: 0;
   background-color: #3333f8;
@@ -412,11 +442,6 @@ button.close {
 
 .extend {
   height: 50rem !important;
-}
-
-.footer {
-  background-color: #e2e2e2;
-  height: 4rem;
 }
 
 .submit-button {
