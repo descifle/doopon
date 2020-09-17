@@ -81,7 +81,7 @@ body {
   padding: 0 0.5rem;
   color: #fad815;
   text-align: center;
-  background-image: linear-gradient(#f12e2e, 80%, #272727);
+  background-color: #f12e2e;
   font-size: 0.9rem;
   font-weight: 600;
 }
