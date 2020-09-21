@@ -294,6 +294,7 @@ body {
   padding: 1rem;
   background-color: #3D5975;
   color: white;
+  overflow: hidden;
 }
 
 .map {

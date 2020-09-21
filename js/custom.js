@@ -123,6 +123,7 @@ $(document).ready(function () {
 
     $('.nav-top, .home, .navbar-brand').click(scrollToTop)
     $('.slider').bxSlider({
+        startSlide: 1,
         captions: true,
         mode: 'fade',
         speed: 1000,

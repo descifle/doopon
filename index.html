@@ -15,15 +15,15 @@
   <link href="./assets/owl-carousel/css/owl.theme.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/jquery-bxslider/css/jquery.bxslider.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-
-  <title>Doopon</title>
+  <meta name="description" content="Doopon Electric LLC proudly serves the community, Services include. Commercial Electrician work, Residential Electrician Work, and we are near you in the Howard County area." />
+  <title>Doopon Electric</title>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="230">
   <header class="fixed-top">
     <div class="head-nav">
         <span><i class="fa fa-phone"></i> <a href="tel:301-974-5110">301-974-5110</a></span>
-        <a href="https://www.facebook.com/Dooponelectric/">
+        <a href="https://www.facebook.com/Dooponelectric/" alt="Doopon Electric Facebook">
           <i class="fa fa-facebook facebook-container"></i>
         </a>
     </div>
@@ -66,14 +66,8 @@
     COMMERCIAL • RESIDENTIAL • NEW CONSTRUCTION • RENOVATIONS • SERVICE CALLS
   </div>
   <div class="slider">
-    <!-- <div id="slide-text_container">
-      <div class="slide-text wow fadeInDown" data-wow-delay="1s">
-        Doopon Electric LLC is commited to bring the highest level of quality, safety, and service to our customers
-        without hassle.
-      </div>
-    </div> -->
-    <div class="slide slide1">
-      <div id="" class="slide-text_container wow fadeIn" data-wow-delay="1s">
+    <div class="slide slide2">
+      <div id="" class="slide-text_container">
         <div class="slide-text " >
           Doopon Electric LLC proudly serving the metropolitan areas of DC, MD, and VA with high quality electrical, construction, and general electrical services.
           Commercial and residential, private or public clients. Utilizes industry best practice to succesfully fulfill our customers needs. 
@@ -82,8 +76,8 @@
         </div>
       </div>
     </div>
-    <div class="slide slide2">
-      <div id="" class="slide-text_container">
+    <div class="slide slide1">
+      <div id="" class="slide-text_container wow fadeIn" data-wow-delay="1s">
         <div class="slide-text " >
           Doopon Electric LLC proudly serving the metropolitan areas of DC, MD, and VA with high quality electrical, construction, and general electrical services.
           Commercial and residential, private or public clients. Utilizes industry best practice to succesfully fulfill our customers needs. 
@@ -107,8 +101,8 @@
     <section class="container mb-5" id="services">
       <h1 class="h1-text">SERVICES</h1>
       <div class="card-container clearfix">
-        <a class="banner_prev" href=""></a>
-				<a class="banner_next" href=""></a>
+        <a class="banner_prev" alt="previous slide"></a>
+				<a class="banner_next" alt="next slide"></a>
         <div class="banners">
           <div class="card">
             <div class="services-card_img">
@@ -117,15 +111,16 @@
             <div class="card-body">
               <h3>Energy</h3>
               <h5>Commercial and Residential</h5>
-              <p class="card-text">
-                Power systems construction
-                New electrical contructions
-                of Apartments, Offices, Restaurants, Stores, Warehouses, Medical clinics, 
-                Codominiums, Schools.
-                Power system testing and maintenance
-                Renovations
-                Electrical Renovations
-              </p>
+              <div class="card-text">
+                <ul>
+                  <li>Power systems construction</li>
+                  <li>New electrical contructions
+                    of Apartments, Offices, Restaurants, Stores, Warehouses, Medical clinics, 
+                    Codominiums, Schools.</li>
+                  <li>Power system testing and maintenance Renovations</li>
+                  <li>Electrical Renovations</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -134,22 +129,22 @@
             </div>
             <div id="card-body1" class="card-body">
               <h3>Power System Construction</h3>
-              <p class="card-text">
+              <div class="card-text">
                 Doopon Electric has the knowledge and the experience in the construction of big and small simple complex elictrical distribution systems
-                Some of our capabilites in this field include.
-                Switchgear installation/replacement/maintenance 
-                Bus duct feeders
-                Meter bank installation/replacement/maintenance 
-                Three phase electrical system construction in (unknown) supplied by single phase electrical systems
-                Doopon electric Also provides a variety of lighting services such as custom lighting systems, 
-                indoor, outdoor and specialty lighting projects.
-                Outdoor lightings
-                Parking lot lights, Ornamental street lighting, electrical signs
-                Specailty lighting
-                Building out lighting, photocell controlled lighting
-                motion sense lights, landscape lighting,
-                energy saving upgrades
-              </p>
+                <br />
+                Doopon electric provides a variety of lighting services such as
+                <ul>
+                  <li>Switchgear installation/replacement/maintenance </li>
+                  <li>custom lighting systems</li>
+                  <li>Meter bank installation/replacement/maintenance</li>
+                  <li>indoor, outdoor and specialty lighting projects</li>
+                  <li>Parking lot lights, Ornamental street lighting, electrical signs</li>
+                  <li>Building out lighting, photocell controlled lighting</li>
+                  <li>motion sense lights, landscape lighting</li>
+                  <li>Bus duct feeders</li>
+                  <li>energy saving upgrades</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="card">
@@ -297,16 +292,16 @@
           <form id="contact-form">
             <h4>Questions?</h4>
             <div class="form-group">
-              <label>Enter Your Name</label>
-              <input class="form-control" type="text" name="name">
+              <label for="name">Enter Your Name</label>
+              <input id="name" class="form-control" type="text" name="name">
             </div>
             <div class="form-group">
-              <label>Enter Your Email</label>
-              <input class="form-control" type="email" name="email">
+              <label for="email">Enter Your Email</label>
+              <input id="email" class="form-control" type="email" name="email">
             </div>
             <div class="form-group">
-              <label>Enter Your Subject</label>
-              <select class="form-control color-dark" type="text" name="subject">
+              <label for="subject">Enter Your Subject</label>
+              <select id="subject" class="form-control color-dark" type="text" name="subject">
                 <option value="energy">Energy</option>
                 <option value="power">Power Systems</option>
                 <option value="new_construction">New Construction</option>
@@ -315,8 +310,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Enter Your Message</label>
-              <textarea class="form-control" type="text" name="message"></textarea>
+              <label for="message">Enter Your Message</label>
+              <textarea id="message" class="form-control" type="text" name="message"></textarea>
             </div>
             <button class="submit-button btn disabled" form="contact-form" type="submit" disabled="true" onclick="blur()">Submit</button>
             <div class="g-recaptcha" data-size="normal" data-sitekey="6Lf0rKIZAAAAAGdV3zMSXomVQl92QWfxpNrLOtll"
@@ -327,7 +322,7 @@
         <div class="col-lg-6">
           <h3 class="header-text text-center">Directions</h3>
           <div class="map">
-            <iframe
+            <iframe title="Directions to location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.407409143073!2d-76.78856408464102!3d39.18819047952691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7e0568f4f43f5%3A0x78f1f2d909b4c1da!2s6618%20Ulm%20Pl%2C%20Elkridge%2C%20MD%2021075!5e0!3m2!1sen!2sus!4v1597694809503!5m2!1sen!2sus"
                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
