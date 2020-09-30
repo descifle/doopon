@@ -173,5 +173,6 @@ ul.bxslider {
   font-family: Arial;
   display: block;
   font-size: .85em;
-  padding: 10px;
+  font-style: italic;
+  padding: 1.5rem;
 }

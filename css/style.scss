@@ -171,7 +171,7 @@ body {
 	position: absolute;
 	display: block;
 	z-index: 2;
-	background-color: rgba(0, 247, 255, 0.171);
+	background-color: $secondary;
 	color: white;
 	width: 20rem;
 	height: 20rem;
@@ -192,18 +192,19 @@ body {
 }
 
 .btn-cta {
-	color: #fff;
+	color: red;
 	font-weight: bolder;
 	margin-top:.5rem;
-    background-color: #28a745;
-    border-color: #28a745;
+	border: 2px solid white;
+    // background-color: #28a745;
+    // border-color: #28a745;
 }
 
 // SLIDE STYLING
 // SERVICES SECTION
 
 .card-container .card{
-	display: inline-block;
+	// display: inline-block;
 	padding-left: 0;
 	padding-right: 0;
 	width: 20rem;
@@ -212,10 +213,10 @@ body {
 	border: 0;
 	overflow: hidden;
 	float: left;
+}
 
-	h3 {
-		color: black;
-	}
+.card-img-top {
+	height: auto;
 }
 
 .card-body {
@@ -226,8 +227,19 @@ body {
 	margin-bottom: 1.4rem;
 	transition: height .4s ease;
 
+	h3 {
+		font-size: 1.2rem;
+		color: $textColor;
+	}
+
+	h5 {
+		font-size: 1.1rem;
+		color: $textFade;
+	}
+
 	ul {
 		margin-bottom: .5rem;
+		list-style: none;
 	}
 }
 
@@ -270,11 +282,10 @@ body {
 	background-color: $secondary;
 	color: white;
 	padding: 2rem;
-	border: 1px solid black;
+	// border: 1px solid black;
 	max-width: 35rem;
 	border-radius: 0;
 	position: static;
-	bottom: -14rem;
 	
 }
 
@@ -303,6 +314,18 @@ body {
 	}
 
 	&:hover {
+
+		.caption {
+			z-index: 10;
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 0;
+			background: #666;
+			background: rgba(80, 80, 80, 0.75);
+			width: 100%;
+		  }
+
 		img {
 			transform: scale(1.2);
 		}
@@ -325,6 +348,20 @@ body {
 .project:hover::after {
 	opacity: .8;
 }
+
+.caption {
+	display: none;
+  }
+  
+.caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .9rem;
+	font-style: italic;
+	padding: 1.5rem;
+}
+
 
 // PROJECTS SECTION
 // CLIENT SECTION
@@ -414,9 +451,24 @@ body {
 	background-color: inherit!important;
 	font-weight: bold;
 
+	.home {
+		color: inherit;
+
+		&:hover {
+			color: black !important;
+		}
+	}
+
 	a {
 		color: inherit;
+		transition: color .2s ease;
+
+		&:hover {
+			color: black;
+		}
 	}
+
+	
 }
 
 .copy {
@@ -429,14 +481,14 @@ body {
 .spacer {
 	background-color: $highlight;
 	font-size: 3rem;
-	color: white;
+	color: black;
 }
 
 .section-item {
 	padding:0 2rem;
 	font-weight: bold;
 	font-size: 1.2rem;
-	color: black;
+	color: white;
 }
 
 img {
@@ -560,6 +612,7 @@ button.close {
 	margin-bottom: 1rem;
 
 	&:disabled {
+		color: #3D5975;
 		background-color: inherit;
 	}
 }
@@ -627,7 +680,6 @@ button.close {
 }
 
 
-
 // MISC STYLING
 
 // TABLET?
@@ -662,6 +714,10 @@ button.close {
 		padding:2rem;
 		border: solid 1px #ddd;
 		border-radius: .2rem;
+	}
+
+	.card-img-top {
+		height: 15rem;
 	}
 
 	.project {
@@ -746,20 +802,15 @@ button.close {
 
 	#about {
 		position: relative;
-		padding-bottom: 10rem;
-		margin-bottom: 10rem;
+		margin-bottom: 6rem;
 	}
 
 	.core-container {
 		background-color: $secondary;
 		color: white;
 		padding: 2rem;
-		border: 1px solid black;
 		max-width: 35rem;
 		border-radius: 40px;
-		position: absolute;
-		bottom: -8rem;
-		
 	}
 	
 	.core-value {

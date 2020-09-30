@@ -129,7 +129,7 @@ body {
   position: absolute;
   display: block;
   z-index: 2;
-  background-color: rgba(0, 247, 255, 0.171);
+  background-color: #3D5975;
   color: white;
   width: 20rem;
   height: 20rem;
@@ -147,15 +147,13 @@ body {
 }
 
 .btn-cta {
-  color: #fff;
+  color: red;
   font-weight: bolder;
   margin-top: 0.5rem;
-  background-color: #28a745;
-  border-color: #28a745;
+  border: 2px solid white;
 }
 
 .card-container .card {
-  display: inline-block;
   padding-left: 0;
   padding-right: 0;
   width: 20rem;
@@ -165,8 +163,9 @@ body {
   overflow: hidden;
   float: left;
 }
-.card-container .card h3 {
-  color: black;
+
+.card-img-top {
+  height: auto;
 }
 
 .card-body {
@@ -177,8 +176,17 @@ body {
   margin-bottom: 1.4rem;
   transition: height 0.4s ease;
 }
+.card-body h3 {
+  font-size: 1.2rem;
+  color: #1d3557;
+}
+.card-body h5 {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.651);
+}
 .card-body ul {
   margin-bottom: 0.5rem;
+  list-style: none;
 }
 
 .card-text {
@@ -213,11 +221,9 @@ body {
   background-color: #3D5975;
   color: white;
   padding: 2rem;
-  border: 1px solid black;
   max-width: 35rem;
   border-radius: 0;
   position: static;
-  bottom: -14rem;
 }
 
 .core-value {
@@ -239,6 +245,16 @@ body {
   transform: scale(1);
   transition: transform 0.4s ease-in-out;
 }
+.project:hover .caption {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
 .project:hover img {
   transform: scale(1.2);
 }
@@ -258,6 +274,19 @@ body {
 
 .project:hover::after {
   opacity: 0.8;
+}
+
+.caption {
+  display: none;
+}
+
+.caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 1.5rem;
 }
 
 #clients {
@@ -317,21 +346,31 @@ body {
   background-color: inherit !important;
   font-weight: bold;
 }
+.list-group-item .home {
+  color: inherit;
+}
+.list-group-item .home:hover {
+  color: black !important;
+}
 .list-group-item a {
   color: inherit;
+  transition: color 0.2s ease;
+}
+.list-group-item a:hover {
+  color: black;
 }
 
 .spacer {
   background-color: #f12e2e;
   font-size: 3rem;
-  color: white;
+  color: black;
 }
 
 .section-item {
   padding: 0 2rem;
   font-weight: bold;
   font-size: 1.2rem;
-  color: black;
+  color: white;
 }
 
 img {
@@ -451,6 +490,7 @@ button.close {
   margin-bottom: 1rem;
 }
 .submit-button:disabled {
+  color: #3D5975;
   background-color: inherit;
 }
 
@@ -550,6 +590,10 @@ button.close {
     border-radius: 0.2rem;
   }
 
+  .card-img-top {
+    height: 15rem;
+  }
+
   .project {
     position: relative;
     margin: 1rem;
@@ -620,19 +664,15 @@ button.close {
 
   #about {
     position: relative;
-    padding-bottom: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
 
   .core-container {
     background-color: #3D5975;
     color: white;
     padding: 2rem;
-    border: 1px solid black;
     max-width: 35rem;
     border-radius: 40px;
-    position: absolute;
-    bottom: -8rem;
   }
 
   .core-value {

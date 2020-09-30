@@ -126,7 +126,6 @@ $(document).ready(function () {
         startSlide: 1,
         captions: true,
         mode: 'fade',
-        speed: 1000,
         touchEnabled: false,
 
     });
